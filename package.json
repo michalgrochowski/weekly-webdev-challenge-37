@@ -1,7 +1,7 @@
 {
-  "name": "Project",
+  "name": "WWC37",
   "version": "1.0.0",
-  "description": "Project description",
+  "description": "Second version of my portfolio page",
   "main": "index.js",
   "devDependencies": {
     "browser-sync": "^2.18.8",
@@ -17,6 +17,6 @@
     "gulp-useref": "^3.1.2",
     "run-sequence": "^1.2.2"
   },
-  "author": "Author",
+  "author": "Michał Grochowski",
   "license": "ISC"
 }
