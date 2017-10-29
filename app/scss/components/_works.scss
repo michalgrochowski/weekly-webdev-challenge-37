@@ -1,0 +1,36 @@
+.works {
+    min-height: 70vh;
+    position: relative;
+    z-index: 3;
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        background-color: #000000;
+        width: 300px;
+        height: 300px;
+        transform: rotate(45deg);
+        left: -150px;
+        top: 80%;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        background-color: rgb(188,46,58);
+        width: 800px;
+        height: 800px;
+        transform: rotate(45deg) translateY(-50%);
+        right: -200px;
+        top: 50%;
+    }
+}
+
+.works__tiles {
+    width: 75%;
+}
+
+.works__tile {
+    width: 30%;
+    margin-left: -10rem;
+}

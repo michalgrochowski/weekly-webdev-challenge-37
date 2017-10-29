@@ -1,0 +1,33 @@
+.about {
+    min-height: 60vh;
+    @include flex-center-row;
+    position: relative;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        right: 0;
+        top: -300px;
+        display: block;
+        content: "";
+        height: 800px;
+        width: 800px;
+        background-color: rgb(23,23,23);
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+}
+
+.about__button {
+    text-transform: uppercase;
+    height: 5rem;
+    width: 18rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: rgb(188,46,58);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.about__macbook {
+    width: 40%;
+}

@@ -1,5 +1,5 @@
 .header {
-    
+    font-family: 'Lato', sans-serif;
 }
 
 .nav {
@@ -11,8 +11,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: transparent;
-    z-index: 1;
+    background-color: rgba(23,23,23,0.5);
+    z-index: 3;
     transition: height 0.5s, background-color 0.5s;
     @include mq-max(900px) {
         height: 7rem;
@@ -32,6 +32,7 @@
     text-decoration: none;
     margin: 0 2rem;
     color: #ffffff;
+    font-weight: bold;
 }
 
 .nav__logo--small {
