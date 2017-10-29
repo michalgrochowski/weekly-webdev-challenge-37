@@ -10,10 +10,13 @@
 @import 'components/_about.scss';
 @import 'components/_services.scss';
 @import 'components/_works.scss';
+@import 'components/_team.scss';
 
 // Vendors
 
 @import 'vendors/_fontello.scss';
+@import 'vendors/_owl.carousel.min.scss';
+@import 'vendors/_owl.theme.default.min.scss';
 
 // Main Styles
 
@@ -71,6 +74,7 @@ body {
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
     &--works {
+        padding-left: 10%;
         width: 25%;
     }
 }

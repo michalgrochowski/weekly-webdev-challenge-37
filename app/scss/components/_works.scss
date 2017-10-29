@@ -1,7 +1,8 @@
 .works {
-    min-height: 70vh;
+    min-height: 50vh;
     position: relative;
     z-index: 3;
+    @include flex-center-column;
     &::before {
         position: absolute;
         content: "";
@@ -27,7 +28,10 @@
 }
 
 .works__tiles {
-    width: 75%;
+    width: 65%;
+    @include flex-center-row;
+    position:  relative;
+    z-index: 2;
 }
 
 .works__tile {

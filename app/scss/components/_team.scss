@@ -3,4 +3,9 @@
     background-color: rgb(246,246,246);
     position: relative;
     z-index: 1;
+    @include flex-center-column;
+}
+
+.team__carousel {
+    width: 100%;
 }
