@@ -10,10 +10,18 @@ var cache = require('gulp-cache');
 var sequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-cssmin');
+var plumber = require('gulp-plumber');
 
 gulp.task('sass', function() {
     return gulp.src('app/scss/**/*.scss')
-        .pipe(sass())
+        .pipe(sass.sync())
+        .pipe(plumber({
+            errorHandler: function(err) {
+                console.log(err);
+                this.emit('end')
+            }
+        }))
+        .pipe(plumber.stop())
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'IE 10-11',],
             cascade: false
@@ -22,7 +30,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
-});
+    });
 
 gulp.task('watch', ['browserSync', 'sass'], function() {
     gulp.watch('app/scss/**/*.scss', ['sass']);

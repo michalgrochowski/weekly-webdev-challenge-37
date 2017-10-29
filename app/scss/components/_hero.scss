@@ -1,0 +1,37 @@
+.hero {
+    width: 100%;
+    height: 120vh;
+    background-image: url("../img/bg-full.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.hero__title {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-55%);
+    left: 20%;
+    font-size: 12rem;
+    width: 30vw;
+    color: #ffffff;
+}
+
+.hero__model {
+    position: absolute;
+    top: 15%;
+    right: 0;
+}
+
+.hero__button {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    height: 4rem;
+    width: 15rem;
+
+}
