@@ -11,6 +11,8 @@
 @import 'components/_services.scss';
 @import 'components/_works.scss';
 @import 'components/_team.scss';
+@import 'components/_clients.scss';
+@import 'components/_footer.scss';
 
 // Vendors
 
@@ -65,6 +67,8 @@ body {
     font-weight: bold;
     color: rgb(73, 73, 73);
     margin: 0;
+    position: relative;
+    z-index: 4;
     &--center {
         text-align: center;
     }

@@ -1,0 +1,29 @@
+.clients {
+    min-height: 750px;
+    position: relative;
+    z-index: 4;
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        background-color: rgb(188,46,58);
+        width: 800px;
+        height: 800px;
+        transform: rotate(45deg) translateY(-50%);
+        left: -800px;
+        top: 50%;
+        z-index: 3;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        background-color: rgb(23,23,23);
+        width: 600px;
+        height: 600px;
+        transform: rotate(-45deg);
+        right: -300px;
+        top: -400px;
+        z-index: 1;
+    }
+}

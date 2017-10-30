@@ -1,8 +1,8 @@
 .team {
-    min-height: 70vh;
+    min-height: 750px;
     background-color: rgb(246,246,246);
     position: relative;
-    z-index: 1;
+    z-index: 5;
     @include flex-center-column;
 }
 
