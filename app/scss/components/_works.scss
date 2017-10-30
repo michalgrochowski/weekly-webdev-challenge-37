@@ -1,5 +1,5 @@
 .works {
-    min-height: 750px;
+    min-height: 720px;
     position: relative;
     z-index: 6;
     @include flex-center-column;
@@ -29,14 +29,27 @@
     }
 }
 
+.works__box {
+    @include flex-center-row;
+    width: 100%;
+    margin-bottom: 15rem;
+}
+
+.works__text-box {
+    padding-left: 10%;
+    width: 35%;
+}
+
 .works__tiles {
     width: 65%;
+    min-height: 365px;
     @include flex-center-row;
-    position:  relative;
+    position: relative;
     z-index: 7;
+    margin-left: 15rem;
 }
 
 .works__tile {
-    width: 30%;
-    margin-left: -10rem;
+    height: 100%;
+    margin-left: -15rem;
 }

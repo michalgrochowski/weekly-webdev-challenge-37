@@ -26,18 +26,17 @@
     @include flex-center-row;
     color: #ffffff;
     width: 100%;
-    justify-content: space-around;
 }
 
 .footer__contact-tile {
     @include flex-column;
     position: relative;
+    margin: 0 15rem;
 }
 
 .footer__icon {
     position: absolute;
     left: -50%;
-    transform: translateX(-50%);
     top: 0;
     font-size: 5rem;
 }

@@ -1,7 +1,15 @@
+// Vendors
+
+@import 'vendors/_normalize.scss';
+@import 'vendors/_fontello.scss';
+@import 'vendors/_slick.scss';
+@import 'vendors/_slick-theme.scss';
+
 // Utilities
 
 @import 'utilities/_mixins.scss';
 @import 'utilities/_typography.scss';
+@import 'utilities/_buttons.scss';
 
 // Components
 
@@ -14,11 +22,6 @@
 @import 'components/_clients.scss';
 @import 'components/_footer.scss';
 
-// Vendors
-
-@import 'vendors/_fontello.scss';
-@import 'vendors/_owl.carousel.min.scss';
-@import 'vendors/_owl.theme.default.min.scss';
 
 // Main Styles
 
@@ -72,15 +75,15 @@ body {
     &--center {
         text-align: center;
     }
+    &--works {
+        align-self: flex-start;
+        margin-top: 7rem;
+    }
 }
 
 .section__text {
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
-    &--works {
-        padding-left: 10%;
-        width: 25%;
-    }
 }
 
 // Misc items

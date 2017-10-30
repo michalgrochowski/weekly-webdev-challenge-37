@@ -10,9 +10,9 @@
         width: 800px;
         height: 800px;
         transform: rotate(45deg) translateY(-50%);
-        left: -800px;
-        top: 50%;
-        z-index: 3;
+        left: -750px;
+        top: 40%;
+        z-index: 4;
     }
     &::after {
         position: absolute;
@@ -26,4 +26,42 @@
         top: -400px;
         z-index: 1;
     }
+}
+
+.clients__box {
+    @include flex-center-row;
+    position: relative;
+    z-index: 6;
+    margin-top: -10rem;
+}
+
+.clients__opinion {
+    width: 40%;
+    margin-left: 10rem;
+    position: relative;
+}
+
+.clients__quote {
+    position: absolute;
+    top: 0;
+    left: -10rem;
+}
+
+.clients__testimonials {
+    font-size: 2.4rem;
+    font-style: italic;
+}
+
+.clients__client-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.clients__thumbnail {
+    @include flex-row;
+}
+
+.clients__thumbnail-img {
+    height: 100%;
+    width: auto;
 }
