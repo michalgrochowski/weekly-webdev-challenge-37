@@ -9,4 +9,8 @@
         background-color: rgb(188,46,58);
         color: #ffffff;
     }
+    @include mq-max(600px) {
+        display: block;
+        margin: 0 auto;
+    }
 }

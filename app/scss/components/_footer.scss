@@ -19,6 +19,9 @@
         right: 100px;
         bottom: -300px;
         z-index: 3;
+        @include mq-max(600px) {
+            display: none;
+        }
     }
 }
 
@@ -26,12 +29,21 @@
     @include flex-center-row;
     color: #ffffff;
     width: 100%;
+    @include mq-max(600px) {
+        flex-direction: column;
+    }
 }
 
 .footer__contact-tile {
     @include flex-column;
     position: relative;
     margin: 0 15rem;
+    @include mq-max(600px) {
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 10%;
+        width: 80%;
+    }
 }
 
 .footer__icon {
@@ -71,15 +83,27 @@
         width: 30%;
         height: 1px;
         background-color: #ffffff;
+        @include mq-max(600px) {
+            width: 80%;
+            top: 90%;
+        }
     }
 }
 
 .footer__social-icon {
     font-size: 2rem;
     margin: 1rem;
+    @include mq-max(600px) {
+        margin: 0.5rem;
+    }
 }
 
 .footer__copyright {
     color: #dbdbdb;
     margin: 0;
+    @include mq-max(600px) {
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
 }

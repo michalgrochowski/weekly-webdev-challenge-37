@@ -734,6 +734,10 @@ template {
   .button--red {
     background-color: #bc2e3a;
     color: #ffffff; }
+  @media screen and (max-width: 600px) {
+    .button {
+      display: block;
+      margin: 0 auto; } }
 
 .header {
   font-family: 'Lato', sans-serif; }
@@ -782,6 +786,9 @@ template {
   margin: 0 2rem;
   color: #ffffff;
   font-weight: bold; }
+  @media screen and (max-width: 600px) {
+    .nav__logo {
+      font-size: 3rem; } }
 
 @media screen and (min-width: 851px) {
   .nav__list {
@@ -879,11 +886,19 @@ template {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   font-family: 'LemonMilkBold'; }
+  @media screen and (max-width: 600px) {
+    .hero__title {
+      font-size: 4rem;
+      left: 0;
+      width: 100%; } }
 
 .hero__model {
   position: absolute;
   top: 15%;
   right: 0; }
+  @media screen and (max-width: 600px) {
+    .hero__model {
+      display: none; } }
 
 .hero__button {
   position: absolute;
@@ -924,9 +939,31 @@ template {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     z-index: -1; }
+    @media screen and (max-width: 600px) {
+      .about::after {
+        display: none; } }
+  @media screen and (max-width: 600px) {
+    .about {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .about__macbook {
   width: 40%; }
+  @media screen and (max-width: 600px) {
+    .about__macbook {
+      margin-top: 3rem;
+      width: 80%; } }
 
 .services {
   position: relative;
@@ -944,6 +981,9 @@ template {
     transform: rotate(45deg) translateY(-50%);
     left: -200px;
     top: 50%; }
+    @media screen and (max-width: 600px) {
+      .services::before {
+        display: none; } }
 
 .services__box {
   width: 70%;
@@ -962,6 +1002,13 @@ template {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media screen and (max-width: 600px) {
+    .services__box {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .services__item {
   font-family: 'Open Sans', sans-serif;
@@ -969,7 +1016,8 @@ template {
   position: relative; }
   @media screen and (max-width: 600px) {
     .services__item {
-      width: 100%; } }
+      width: 90%;
+      margin: 1rem 0; } }
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     .services__item {
       width: 50%; } }
@@ -1000,6 +1048,9 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
+  @media screen and (max-width: 600px) {
+    .services__circle {
+      left: -1rem; } }
 
 .services__title {
   font-size: 3.6rem;
@@ -1007,11 +1058,22 @@ template {
   padding-left: 10%;
   width: 80%;
   margin: 1rem 0; }
+  @media screen and (max-width: 600px) {
+    .services__title {
+      font-size: 2.4rem;
+      width: 80%;
+      padding-left: 20%;
+      padding-right: 0; } }
 
 .services__text {
   padding-left: 10%;
   padding-right: 20%;
   width: 70%; }
+  @media screen and (max-width: 600px) {
+    .services__text {
+      width: 80%;
+      padding-left: 20%;
+      padding-right: 0; } }
 
 .How_we_works {
   font-size: 150px;
@@ -1056,6 +1118,9 @@ template {
     left: -150px;
     top: 80%;
     z-index: 5; }
+    @media screen and (max-width: 600px) {
+      .works::before {
+        display: none; } }
   .works::after {
     position: absolute;
     content: "";
@@ -1068,6 +1133,9 @@ template {
     right: -200px;
     top: 50%;
     z-index: 6; }
+    @media screen and (max-width: 600px) {
+      .works::after {
+        display: none; } }
 
 .works__box {
   display: -webkit-box;
@@ -1085,10 +1153,19 @@ template {
   flex-direction: row;
   width: 100%;
   margin-bottom: 15rem; }
+  @media screen and (max-width: 600px) {
+    .works__box {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .works__text-box {
   padding-left: 10%;
   width: 35%; }
+  @media screen and (max-width: 600px) {
+    .works__text-box {
+      width: 80%; } }
 
 .works__tiles {
   width: 65%;
@@ -1109,6 +1186,12 @@ template {
   position: relative;
   z-index: 7;
   margin-left: 15rem; }
+  @media screen and (max-width: 600px) {
+    .works__tiles {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .works__tile {
   height: 100%;
@@ -1168,6 +1251,9 @@ template {
     left: -750px;
     top: 40%;
     z-index: 4; }
+    @media screen and (max-width: 600px) {
+      .clients::before {
+        display: none; } }
   .clients::after {
     position: absolute;
     content: "";
@@ -1180,6 +1266,9 @@ template {
     right: -300px;
     top: -400px;
     z-index: 1; }
+    @media screen and (max-width: 600px) {
+      .clients::after {
+        display: none; } }
 
 .clients__box {
   display: -webkit-box;
@@ -1198,20 +1287,42 @@ template {
   position: relative;
   z-index: 6;
   margin-top: -10rem; }
+  @media screen and (max-width: 600px) {
+    .clients__box {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-top: 0; } }
+
+@media screen and (max-width: 600px) {
+  .clients__client-face {
+    width: 80%; } }
 
 .clients__opinion {
   width: 40%;
   margin-left: 10rem;
   position: relative; }
+  @media screen and (max-width: 600px) {
+    .clients__opinion {
+      width: 75%;
+      margin: 0 10% 0 15%; } }
 
 .clients__quote {
   position: absolute;
   top: 0;
   left: -10rem; }
+  @media screen and (max-width: 600px) {
+    .clients__quote {
+      left: -7rem;
+      opacity: 0.5; } }
 
 .clients__testimonials {
   font-size: 2.4rem;
   font-style: italic; }
+  @media screen and (max-width: 600px) {
+    .clients__testimonials {
+      font-size: 1.6rem; } }
 
 .clients__client-name {
   font-size: 2rem;
@@ -1264,6 +1375,9 @@ template {
     right: 100px;
     bottom: -300px;
     z-index: 3; }
+    @media screen and (max-width: 600px) {
+      .footer::after {
+        display: none; } }
 
 .footer__contact-box {
   display: -webkit-box;
@@ -1281,6 +1395,12 @@ template {
   flex-direction: row;
   color: #ffffff;
   width: 100%; }
+  @media screen and (max-width: 600px) {
+    .footer__contact-box {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .footer__contact-tile {
   display: -webkit-box;
@@ -1292,6 +1412,16 @@ template {
   flex-direction: column;
   position: relative;
   margin: 0 15rem; }
+  @media screen and (max-width: 600px) {
+    .footer__contact-tile {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 1rem 10%;
+      width: 80%; } }
 
 .footer__icon {
   position: absolute;
@@ -1341,14 +1471,26 @@ template {
     width: 30%;
     height: 1px;
     background-color: #ffffff; }
+    @media screen and (max-width: 600px) {
+      .footer__social-box::after {
+        width: 80%;
+        top: 90%; } }
 
 .footer__social-icon {
   font-size: 2rem;
   margin: 1rem; }
+  @media screen and (max-width: 600px) {
+    .footer__social-icon {
+      margin: 0.5rem; } }
 
 .footer__copyright {
   color: #dbdbdb;
   margin: 0; }
+  @media screen and (max-width: 600px) {
+    .footer__copyright {
+      font-size: 1.4rem;
+      padding: 0.5rem 1rem;
+      text-align: center; } }
 
 html {
   font-size: 10px;
@@ -1386,19 +1528,6 @@ body {
   margin-top: 5rem; }
 
 .section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%; }
@@ -1406,6 +1535,9 @@ body {
 .section__article {
   width: 40%;
   text-align: left; }
+  @media screen and (max-width: 600px) {
+    .section__article {
+      width: 80%; } }
 
 .section__title {
   font-family: 'PeaceSans';
@@ -1422,6 +1554,10 @@ body {
     -ms-flex-item-align: start;
     align-self: flex-start;
     margin-top: 7rem; }
+  @media screen and (max-width: 600px) {
+    .section__title {
+      font-size: 3rem;
+      width: 100%; } }
 
 .section__text {
   font-size: 2rem;

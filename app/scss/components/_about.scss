@@ -14,9 +14,19 @@
         background-color: rgb(23,23,23);
         transform: rotate(45deg);
         z-index: -1;
+        @include mq-max(600px) {
+            display: none;
+        }
+    }
+    @include mq-max(600px) {
+        @include flex-center-column;
     }
 }
 
 .about__macbook {
     width: 40%;
+    @include mq-max(600px) {
+        margin-top: 3rem;
+        width: 80%;
+    }
 }

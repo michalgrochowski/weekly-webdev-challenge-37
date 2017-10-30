@@ -13,6 +13,9 @@
         left: -750px;
         top: 40%;
         z-index: 4;
+        @include mq-max(600px) {
+            display: none;
+        }
     }
     &::after {
         position: absolute;
@@ -25,6 +28,9 @@
         right: -300px;
         top: -400px;
         z-index: 1;
+        @include mq-max(600px) {
+            display: none;
+        }
     }
 }
 
@@ -33,23 +39,44 @@
     position: relative;
     z-index: 6;
     margin-top: -10rem;
+    @include mq-max(600px) {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+.clients__client-face {
+    @include mq-max(600px) {
+        width: 80%;
+    }
 }
 
 .clients__opinion {
     width: 40%;
     margin-left: 10rem;
     position: relative;
+    @include mq-max(600px) {
+        width: 75%;
+        margin: 0 10% 0 15%;
+    }
 }
 
 .clients__quote {
     position: absolute;
     top: 0;
     left: -10rem;
+    @include mq-max(600px) {
+        left: -7rem;
+        opacity: 0.5;
+    }
 }
 
 .clients__testimonials {
     font-size: 2.4rem;
     font-style: italic;
+    @include mq-max(600px) {
+        font-size: 1.6rem;
+    }
 }
 
 .clients__client-name {

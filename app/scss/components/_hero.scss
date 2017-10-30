@@ -21,12 +21,20 @@
     opacity: 0.3;
     filter: grayscale(100%);
     font-family: 'LemonMilkBold';
+    @include mq-max(600px) {
+        font-size: 4rem;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .hero__model {
     position: absolute;
     top: 15%;
     right: 0;
+    @include mq-max(600px) {
+        display: none;
+    }
 }
 
 .hero__button {

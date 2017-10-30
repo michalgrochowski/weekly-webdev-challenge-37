@@ -32,6 +32,9 @@
     margin: 0 2rem;
     color: #ffffff;
     font-weight: bold;
+    @include mq-max(600px) {
+        font-size: 3rem;
+    }
 }
 
 .nav__list {

@@ -14,6 +14,9 @@
         left: -150px;
         top: 80%;
         z-index: 5;
+        @include mq-max(600px) {
+            display: none;
+        }
     }
     &::after {
         position: absolute;
@@ -26,6 +29,9 @@
         right: -200px;
         top: 50%;
         z-index: 6;
+        @include mq-max(600px) {
+            display: none;
+        }
     }
 }
 
@@ -33,11 +39,17 @@
     @include flex-center-row;
     width: 100%;
     margin-bottom: 15rem;
+    @include mq-max(600px) {
+        flex-direction: column;
+    }
 }
 
 .works__text-box {
     padding-left: 10%;
     width: 35%;
+    @include mq-max(600px) {
+         width: 80%;
+    }
 }
 
 .works__tiles {
@@ -47,6 +59,9 @@
     position: relative;
     z-index: 7;
     margin-left: 15rem;
+    @include mq-max(600px) {
+         flex-direction: column;
+    }
 }
 
 .works__tile {
