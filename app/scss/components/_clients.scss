@@ -76,6 +76,7 @@
     font-style: italic;
     @include mq-max(600px) {
         font-size: 1.6rem;
+        padding-left: 5%;
     }
 }
 

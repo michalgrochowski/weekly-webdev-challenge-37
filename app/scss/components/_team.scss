@@ -1,5 +1,5 @@
 .team {
-    min-height: 750px;
+    min-height: 350px;
     background-color: rgb(246,246,246);
     position: relative;
     z-index: 5;
@@ -8,12 +8,23 @@
 
 .team__carousel {
     width: 100%;
-    padding: 30px 0;
+    padding: 3rem 0;
+    min-height: 350px;
+    @include mq-max(600px) {
+        width: 80%;
+    }
+    @include mq-min(1025px) {
+        width: 70%;
+    }
 }
 
 .team__carousel-item {
-    height: 500px;
-    padding: 2rem;
+    padding: 6rem 0 6rem 0;
+    position: relative;
+    @include mq-max(600px) {
+        width: 80%;
+        padding: 3rem 10% 3rem 10%;
+    }
 }
 
 .team__carousel-image {
@@ -21,8 +32,100 @@
     width: auto;
 }
 
-.slick-current {
-    z-index: 5;
-    transform: scale(1.2);
-    transition: all 0.5s;
+.team__name-box {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%) skew(30deg);
+    background-color: #333333;
+    height: 3.5rem;
+    width: 15rem;
+    margin-left: 1rem;
+    color: #ffffff;
+    @include flex-center-column;
+    @include mq-max(600px) {
+        top: 80%;
+    }
+}
+
+.team__name-text {
+    transform: skew(-30deg);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.team__position-box {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    transform: translateX(-55%) skew(30deg);
+    background-color: rgb(188,46,58);
+    height: 2.5rem;
+    width: 10rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    @include flex-center-column;
+    opacity: 0;
+    transition: 0.1s all;
+    &--active {
+        opacity: 1;
+        transition: 0.1s all;
+    }
+    @include mq-max(600px) {
+        top: 90%;
+        z-index: 6;
+    }
+}
+
+.team__position-text {
+    transform: skew(-30deg);
+    color: #ffffff;
+    font-style: italic;
+    margin: 0;
+}
+
+.owl-carousel .owl-item {
+    opacity: 0.7;
+}
+
+.owl-carousel .owl-stage-outer {
+    min-height: 400px;
+}
+
+.owl-carousel .owl-item.center {
+    transform: scale(1.3);
+    transform-origin: center center;
+    opacity: 1;
+    transition: 0.3s all;
+    z-index: 3;
+}
+
+.team__prev, .team__next {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    display: block;
+    border: none;
+    @include mq-max(600px) {
+        display: none;
+    }
+}
+
+.team__prev {
+    left: 5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 50px 0;
+    border-color: transparent #333333 transparent transparent;
+}
+
+.team__next {
+    right: 5rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 50px;
+    border-color: transparent transparent transparent #333333;
 }

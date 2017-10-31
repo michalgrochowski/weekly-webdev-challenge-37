@@ -32,6 +32,12 @@
     @include mq-max(600px) {
         flex-direction: column;
     }
+    @include mq-minmax(601px,1024px) {
+        
+    }
+    @include mq-min(1025px) {
+        margin-top: 4rem;
+    }
 }
 
 .footer__contact-tile {
@@ -72,7 +78,7 @@
     width: 100%;
     @include flex-center-row;
     position: relative;
-    height: 100px;
+    height: 80px;
     &::after {
         position: absolute;
         content: "";
@@ -87,6 +93,9 @@
             width: 80%;
             top: 90%;
         }
+    }
+    @include mq-min(1025px) {
+        margin-top: 2rem;
     }
 }
 
@@ -105,5 +114,8 @@
         font-size: 1.4rem;
         padding: 0.5rem 1rem;
         text-align: center;
+    }
+    @include mq-min(1025px) {
+        margin-top: 3rem;
     }
 }

@@ -11,19 +11,23 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(23,23,23,0.5);
+    background-color: transparent;
     z-index: 10;
     transition: height 0.5s, background-color 0.5s;
+    @include mq-max(600px) {
+        padding: 1rem 0 1rem 0;
+    }
     @include mq-max(900px) {
         height: 7rem;
     }
-}
-
-.nav--small {
-    height: 4rem;
-    padding: 0.2rem 2rem 0.2rem 0;
-    background-color: rgba(255, 255, 255, 1);
-    transition: height 0.5s, background-color 0.5s;
+    &--small {
+        height: 5rem;
+        padding: 0.2rem 2rem 0.2rem 0;
+        transition: height 0.5s, background-color 0.5s;
+    }
+    &--scrolled {
+        background-color: rgba(23,23,23,0.7);
+    }
 }
 
 .nav__logo {
@@ -32,8 +36,15 @@
     margin: 0 2rem;
     color: #ffffff;
     font-weight: bold;
+    transition: 0.3s all;
     @include mq-max(600px) {
         font-size: 3rem;
+    }
+    &--small {
+        font-size: 3rem;
+        @include mq-max(600px) {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -46,20 +57,18 @@
     @include mq-max(850px) {
         display: none;
     }
-}
-
-.nav__list--mobile {
-    background-color: rgba(255, 255, 255, 1);
-    position: absolute;
-    left: 0;
-    top: 5.4rem;
-    width: 100%;
-    display: none;
-}
-
-.nav__list--mobile--scrolled {
-    @extend .nav__list--mobile;
-    top: 2.4rem;
+    &--mobile {
+        padding: 0;
+        position: absolute;
+        background-color: rgba(23,23,23,0.7);
+        left: 0;
+        top: 7.4rem;
+        width: 100%;
+        display: none;
+        &--scrolled {
+            top: 3.8rem;
+        }
+    }
 }
 
 .nav__item {
@@ -70,15 +79,14 @@
         text-align: center;
         width: 100%;
     }
-}
-
-.nav__item--mobile {
-    margin-left: -2rem;
-}
-
-.nav__item:last-of-type {
-    @include mq-min(851px) {
-        margin-right: 3rem;
+    &--mobile {
+        margin-left: 0;
+        padding: 1rem 0;
+    }
+    &:last-of-type {
+        @include mq-min(851px) {
+            margin-right: 3rem;
+        }
     }
 }
 
@@ -86,11 +94,10 @@
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-.nav__link:hover {
-    color: #eaeaea;
-    text-decoration: underline;
+    &:hover {
+        color: #eaeaea;
+        text-decoration: underline;
+    }
 }
 
 .nav__hamburger {

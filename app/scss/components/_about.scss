@@ -20,6 +20,7 @@
     }
     @include mq-max(600px) {
         @include flex-center-column;
+        min-height: 500px;
     }
 }
 

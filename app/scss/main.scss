@@ -2,8 +2,8 @@
 
 @import 'vendors/_normalize.scss';
 @import 'vendors/_fontello.scss';
-@import 'vendors/_slick.scss';
-@import 'vendors/_slick-theme.scss';
+@import 'vendors/_owl.carousel.scss';
+@import 'vendors/_owl.theme.default.scss';
 
 // Utilities
 
@@ -21,7 +21,6 @@
 @import 'components/_team.scss';
 @import 'components/_clients.scss';
 @import 'components/_footer.scss';
-
 
 // Main Styles
 
@@ -55,6 +54,8 @@ body {
 .section {
     flex-wrap: wrap;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .section__article {
@@ -74,22 +75,40 @@ body {
     margin: 0;
     position: relative;
     z-index: 4;
+    @include mq-max(600px) {
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+    @include mq-minmax(600px,1024px) {
+        font-size: 3rem;
+        width: 100%;
+    }
+    @include mq-min(1025px) {
+        margin-left: 10%;
+        margin-top: 3rem;
+    }
     &--center {
         text-align: center;
+        margin-left: 0;
     }
     &--works {
         align-self: flex-start;
         margin-top: 7rem;
     }
-    @include mq-max(600px) {
-        font-size: 3rem;
-        width: 100%;
-    }
 }
 
 .section__text {
-    font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
+    @include mq-max(600px) {
+        font-size: 1.4rem;
+    }
+    @include mq-minmax(600px,1024px) {
+        font-size: 1.6rem;
+    }
+    @include mq-min(1025px) {
+        font-size: 2rem;
+    }
 }
 
 // Misc items

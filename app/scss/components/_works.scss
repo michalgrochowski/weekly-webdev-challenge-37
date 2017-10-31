@@ -49,6 +49,7 @@
     width: 35%;
     @include mq-max(600px) {
          width: 80%;
+         padding-right: 10%;
     }
 }
 

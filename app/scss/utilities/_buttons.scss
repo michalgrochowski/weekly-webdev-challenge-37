@@ -5,6 +5,7 @@
     border-radius: 3rem;
     border: none;
     font-weight: bold;
+    cursor: pointer;
     &--red {
         background-color: rgb(188,46,58);
         color: #ffffff;
@@ -12,5 +13,9 @@
     @include mq-max(600px) {
         display: block;
         margin: 0 auto;
+    }
+    @include mq-min(1025px) {
+        display: block;
+        margin: 4rem 0 2rem 0;
     }
 }

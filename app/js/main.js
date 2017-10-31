@@ -1,30 +1,27 @@
 (function(){
 
-$('.team__carousel').slick({
-    centerMode: true,
-    centerPadding: '220px',
-    slidesToShow: 3,
-    responsive: [
-        {
-        breakpoint: 768,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-        }
+$('.team__carousel').owlCarousel({
+    loop: true,
+    lazyLoad: true,
+    nav: false,
+    center: true,
+    responsive:{
+        0:{
+            items:1,
+            margin:0
         },
-        {
-        breakpoint: 480,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
+        1024:{
+            items:3,
+            margin:-30
         }
-        }
-    ]
-    });
+    }
+})
+
+$(window).on("scroll touchmove", function () {
+    $('.nav').toggleClass("nav--small nav--scrolled", $(document).scrollTop() > 110);
+    $('.nav__logo').toggleClass("nav__logo--small", $(document).scrollTop() > 110);
+    $(".nav__list--mobile").toggleClass("nav__list--mobile--scrolled", $(document).scrollTop() > 70);
+});
 
 $(".nav__link--mobile").on('click', function() {
     $(".nav__hamburger").show();
@@ -53,4 +50,43 @@ $(".nav__link--start").on("click", function(){
         return;
     }
 });
+
+$(".owl-carousel").on("translated.owl.carousel", function(e) {
+    $(".owl-carousel .owl-item .team__position-box").removeClass("team__position-box--active");
+    $(".owl-carousel .owl-item.center .team__position-box").addClass("team__position-box--active");
+});
+
+$('.team__next').click(function() {
+    $('.team__carousel').trigger('next.owl.carousel', [300]);
+});
+
+$('.team__prev').click(function() {
+    $('.team__carousel').trigger('prev.owl.carousel', [300]);
+});
+
+$(document).on('click', '.nav__link--mobile', function(e) {
+    var id = $(this).attr('href');
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    e.preventDefault();
+    var pos = $id.offset().top -50;
+    $('body, html').animate({scrollTop: pos});
+    $(".nav__hamburger").show();
+    $(".nav__close-menu").hide();
+    $(".nav__list--mobile").hide();
+});
+
+$(document).on('click', '.nav__link', function(e) {
+    var id = $(this).attr('href');
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    e.preventDefault();
+    var pos = $id.offset().top -50;
+    $('body, html').animate({scrollTop: pos});
+});
+
 })();

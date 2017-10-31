@@ -22,38 +22,38 @@
 	<!-- Twitter card -->
 
 </head>
-<body id="body" class=""> 
+<body id="" class=""> 
 	<header class="header">
 		<nav class="nav">
 			<a href="index.html" title="" class="nav__logo">Agency</a>
 			<ul class="nav__list">
-				<li class="nav__item"><a class="nav__link" href="#body" title="Home">Home</a></li>
+				<li class="nav__item"><a class="nav__link" href="#home" title="Home">Home</a></li>
 				<li class="nav__item"><a class="nav__link" href="#about" title="About us">About us</a></li>
-				<li class="nav__item"><a class="nav__link" href="#team" title="Team">Team</a></li>
 				<li class="nav__item"><a class="nav__link" href="#services" title="Services">Services</a></li>
-				<li class="nav__item"><a class="nav__link" href="#process" title="Process">Process</a></li>
+				<li class="nav__item"><a class="nav__link" href="#works" title="Process">Process</a></li>
+				<li class="nav__item"><a class="nav__link" href="#team" title="Team">Team</a></li>
 				<li class="nav__item"><a class="nav__link" href="#clients" title="Clients">Clients</a></li>
-				<li class="nav__item"><a class="nav__link" href="#work" title="Work">Work</a></li>
+				<li class="nav__item"><a class="nav__link" href="#contact" title="Work">Contact</a></li>
 			</ul>
 			<ul class="nav__list--mobile">
-				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#body" title="Home">Home</a></li>
+				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#home" title="Home">Home</a></li>
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#about" title="About us">About us</a></li>
-				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#team" title="Team">Team</a></li>
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#services" title="Services">Services</a></li>
-				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#process" title="Process">Process</a></li>
+				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#works" title="Process">Process</a></li>
+				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#team" title="Team">Team</a></li>
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#clients" title="Clients">Clients</a></li>
-				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#work" title="Work">Work</a></li>
+				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#contact" title="Work">Contact</a></li>
 			</ul>
 			<button class="nav__hamburger icon-menu"></button>
 			<button class="nav__close-menu icon-cancel"></button>
 		</nav> 
 	</header>
-	<main class="container">
-		<section id="" class="section hero">  
+	<main id="home" class="container">
+		<section id="hero" class="section hero">  
 			<h2 class="hero__title">Think<br> outside <br>of the box</h2>
 			<img class="hero__model" src="img/model.png">
 		</section>   
-		<section id="" class="section about">  
+		<section id="about" class="section about">  
 			<article class="section__article">
 				<h2 class="section__title">Who we are</h2>
 				<p class="section__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
@@ -61,7 +61,7 @@
 			</article>
 			<img class="about__macbook" src="img/macbookpro.png" alt="">
 		</section> 
-		<section id="" class="section services">  
+		<section id="services" class="section services">  
 			<h2 class="section__title section__title--center">What we do</h2>
 			<div class="services__box">
 				<article class="services__item">
@@ -96,7 +96,7 @@
 				</article>
 			</div>
 		</section>
-		<section id="" class="section works">  
+		<section id="works" class="section works">  
 			<h2 class="section__title section__title--works">How we works</h2>
 			<div class="works__box">
 				<div class="works__text-box">
@@ -105,20 +105,34 @@
 				</div>
 				<div class="works__tiles">
 					<img class="works__tile" src="img/tile1.png" alt="">
-					<img class="works__tile" src="img/tile2.png" alt="">
+					<img class="works__tile" src="img/tile1.png" alt="">
 					<img class="works__tile" src="img/tile1.png" alt="">
 				</div>
 			</div>
 		</section>
-		<section id="" class="section team">  
+		<section id="team" class="section team">  
 			<h2 class="section__title section__title--center">Our creative team</h2>
-			<div class="team__carousel">
-				<div class="team__carousel-item"><img class="team__carousel-image" src="img/jimmy.png" alt=""></div>
-				<div class="team__carousel-item"><img class="team__carousel-image" src="img/jimmy.png" alt=""></div>
-				<div class="team__carousel-item"><img class="team__carousel-image" src="img/jimmy.png" alt=""></div>
+			<button class="team__prev"><span class=""></span></button>
+			<button class="team__next "><span class=""></span></button>
+			<div class="team__carousel owl-carousel">
+				<div class="team__carousel-item">
+					<img class="team__carousel-image" src="img/jimmy.png" alt="">
+					<div class="team__name-box"><p class="team__name-text">Jimmy Doe</p></div>
+					<div class="team__position-box"><p class="team__position-text">Designer</p></div>
+				</div>
+				<div class="team__carousel-item">
+					<img class="team__carousel-image" src="img/jimmy.png" alt="">
+					<div class="team__name-box"><p class="team__name-text">Jimmy Doe</p></div>
+					<div class="team__position-box"><p class="team__position-text">Designer</p></div>
+				</div>
+				<div class="team__carousel-item">
+					<img class="team__carousel-image" src="img/jimmy.png" alt="">
+					<div class="team__name-box"><p class="team__name-text">Jimmy Doe</p></div>
+					<div class="team__position-box"><p class="team__position-text">Designer</p></div>
+				</div>
 			</div>
 		</section>
-		<section id="" class="section clients">  
+		<section id="clients" class="section clients">  
 			<h2 class="section__title">What clients say</h2>
 			<div class="clients__box">
 				<img class="clients__client-face" src="img/client1.png" alt="">
@@ -128,13 +142,13 @@
 					<p class="clients__client-name">Jinny Snow, Company CEO</p>
 					<div class="clients__thumbnail">
 						<img class="clients__thumbnail-img" src="img/client-sm-1.png" alt="">
-						<img class="clients__thumbnail-img" src="img/client-sm-2.png" alt="">
-						<img class="clients__thumbnail-img" src="img/client-sm-3.png" alt="">
+						<img class="clients__thumbnail-img" src="img/client-sm-1.png" alt="">
+						<img class="clients__thumbnail-img" src="img/client-sm-1.png" alt="">
 					</div>
 				</div>
 			</div>
 		</section>
-		<footer id="footer" class="section footer">
+		<footer id="contact" class="section footer">
 			<h2 class="section__title section__title--center">Get in touch</h2>
 			<div class="footer__contact-box">
 				<div class="footer__contact-tile">
@@ -170,7 +184,7 @@
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--build:js js/main.min.js -->
-	<script src="js/slick.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
 	<script src="js/main.js"></script>
 	<!-- endbuild -->
 </body>
