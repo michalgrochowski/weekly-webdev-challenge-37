@@ -32,6 +32,17 @@
     width: auto;
 }
 
+.team__carousel.owl-carousel .owl-item .team__carousel-item .team__carousel-image img {
+    width: 50%;
+    height: auto;
+    @include mq-max(600px) {
+        width: 100%;
+    }
+    @include mq-minmax(601px,1024px) {
+        width: 70%;
+    }
+}
+
 .team__name-box {
     position: absolute;
     top: 75%;
@@ -108,7 +119,7 @@
     display: block;
     border: none;
     cursor: pointer;
-    @include mq-max(600px) {
+    @include mq-max(1024px) {
         display: none;
     }
 }

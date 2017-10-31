@@ -44,7 +44,8 @@
         margin: 1rem 0;
     }
     @include mq-minmax(601px,1024px) {
-        width: 50%;
+        width: 40%;
+        margin: 0 5% 0 5%;
     }
     @include mq-min(1025px) {
         width: 33.33%;
@@ -64,6 +65,9 @@
     @include mq-max(600px) {
         left: -1rem;
     }
+    @include mq-minmax(601px, 1024px) {
+        left: -4rem;
+    }
 }
 
 .services__icon {
@@ -82,6 +86,11 @@
         padding-left: 20%;
         padding-right: 0;
     }
+    @include mq-minmax(601px, 1450px) {
+        font-size: 2.8rem;
+        width: 80%;
+        padding-left: 10%;
+    }
 }
 
 .services__text {
@@ -94,19 +103,9 @@
         padding-right: 0;
         font-size: 1.3rem;
     }
-}
-
-.How_we_works {
-  font-size: 150px;
-  font-family: "PeaceSans";
-  color: rgb(73, 73, 73);
-  line-height: 1.2;
-  text-align: left;
-  -moz-transform: matrix( 0.41209574560932,0,0,0.41209574560932,0,0);
-  -webkit-transform: matrix( 0.41209574560932,0,0,0.41209574560932,0,0);
-  -ms-transform: matrix( 0.41209574560932,0,0,0.41209574560932,0,0);
-  position: absolute;
-  left: -18.664px;
-  top: 2263px;
-  z-index: 123;
+    @include mq-minmax(601px, 1024px) {
+        font-size: 1.5rem;
+        width: 90%;
+        padding-left: 10%;
+    }
 }

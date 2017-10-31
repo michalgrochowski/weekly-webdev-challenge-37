@@ -39,7 +39,7 @@
     @include flex-center-row;
     width: 100%;
     margin-bottom: 15rem;
-    @include mq-max(600px) {
+    @include mq-max(1024px) {
         flex-direction: column;
     }
 }
@@ -47,10 +47,10 @@
 .works__text-box {
     padding-left: 10%;
     width: 35%;
-    @include mq-max(600px) {
+    @include mq-max(1024px) {
          width: 80%;
          padding-right: 10%;
-    }
+        }
 }
 
 .works__tiles {
@@ -66,6 +66,72 @@
 }
 
 .works__tile {
-    height: 100%;
-    margin-left: -15rem;
+    margin-left: -5rem;
+    position: relative;
+    &:hover .works__title {
+        bottom: 15rem;
+        left: 10rem;
+        transition: 0.3s all;
+    }
+    &:hover .works__text {
+        bottom: 8rem;
+        left: 10rem;
+        transition: 0.3s all;
+        opacity: 1;
+    }
+    @include mq-max(600px) {
+         margin-left: -10rem;
+        }
+    @include mq-minmax(601px,1024px) {
+         margin-left: -9rem;
+    }
+}
+
+.works__number {
+    position: absolute;
+    top: 3rem;
+    right: 10rem;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: bold;
+    @include mq-max(1024px) {
+         right: 15rem;
+    }
+}
+
+.works__title {
+    transition: 0.3s all;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: bold;
+    &--idea {
+        margin-left: 5rem;
+    }
+    @include mq-max(1024px) {
+        bottom: 15rem;
+        left: 8rem;
+    }
+}
+
+.works__text {
+    transition: 0.3s all;
+    position: absolute;
+    bottom: -5rem;
+    left: -7rem;
+    width: 20rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+    opacity: 0;
+    &--idea {
+        margin-left: 5rem;
+    }
+    @include mq-max(1024px) {
+        bottom: 8rem;
+        left: 8rem;
+        opacity: 1;
+    }
 }

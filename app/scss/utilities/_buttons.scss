@@ -6,11 +6,26 @@
     border: none;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(51,51,51,0.5);
     &--red {
         background-color: rgb(188,46,58);
         color: #ffffff;
     }
-    @include mq-max(600px) {
+    &--white {
+        background-color: #ffffff;
+        color: #333333;
+    }
+    &--hero {
+        position: absolute;
+        bottom: 15%;
+        left: 30%;
+        @include mq-max(1024px) {
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    @include mq-max(1024px) {
         display: block;
         margin: 0 auto;
     }

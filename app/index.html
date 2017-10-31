@@ -25,7 +25,7 @@
 <body id="" class=""> 
 	<header class="header">
 		<nav class="nav">
-			<a href="index.html" title="" class="nav__logo">Agency</a>
+			<a href="#home" title="" class="nav__logo">Agency</a>
 			<ul class="nav__list">
 				<li class="nav__item"><a class="nav__link" href="#home" title="Home">Home</a></li>
 				<li class="nav__item"><a class="nav__link" href="#about" title="About us">About us</a></li>
@@ -34,6 +34,7 @@
 				<li class="nav__item"><a class="nav__link" href="#team" title="Team">Team</a></li>
 				<li class="nav__item"><a class="nav__link" href="#clients" title="Clients">Clients</a></li>
 				<li class="nav__item"><a class="nav__link" href="#contact" title="Work">Contact</a></li>
+				<li class="nav__item"><button class="nav__icon icon-search"></button><button class="nav__icon icon-facebook"></button></li>
 			</ul>
 			<ul class="nav__list--mobile">
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#home" title="Home">Home</a></li>
@@ -43,6 +44,7 @@
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#team" title="Team">Team</a></li>
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#clients" title="Clients">Clients</a></li>
 				<li class="nav__item nav__item--mobile"><a class="nav__link nav__link--mobile" href="#contact" title="Work">Contact</a></li>
+				<li class="nav__item nav__item--mobile"><button class="nav__icon icon-search"></button><button class="nav__icon icon-facebook"></button></li>
 			</ul>
 			<button class="nav__hamburger icon-menu"></button>
 			<button class="nav__close-menu icon-cancel"></button>
@@ -50,8 +52,9 @@
 	</header>
 	<main id="home" class="container">
 		<section id="hero" class="section hero">  
-			<h2 class="hero__title">Think<br> outside <br>of the box</h2>
+			<h2 class="hero__title">Think<br> <span class="hero__big-title">outside</span> <br><span class="hero__big-small">of the box</span></h2>
 			<img class="hero__model" src="img/model.png">
+			<button class="button button--white button--hero">Read more</button>
 		</section>   
 		<section id="about" class="section about">  
 			<article class="section__article">
@@ -104,9 +107,36 @@
 					<button class="button button--red">Read more</button>
 				</div>
 				<div class="works__tiles">
-					<img class="works__tile" src="img/tile1.png" alt="">
-					<img class="works__tile" src="img/tile1.png" alt="">
-					<img class="works__tile" src="img/tile1.png" alt="">
+					<div class="works__tile">
+						<img class="" src="img/tile1.png" alt="">
+						<span class="works__number">.1</span>
+						<span class="works__title works__title--idea">
+							Idea
+						</span>
+						<span class="works__text works__text--idea">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+						</span>
+					</div>
+					<div class="works__tile">
+						<img class="works__tile" src="img/tile1.png" alt="">
+						<span class="works__number">.2</span>
+						<span class="works__title">
+							Design
+						</span>
+						<span class="works__text">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+						</span>
+					</div>
+					<div class="works__tile">
+						<img class="works__tile" src="img/tile1.png" alt="">
+						<span class="works__number">.3</span>
+						<span class="works__title">
+							Output
+						</span>
+						<span class="works__text">
+							Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+						</span>
+					</div>
 				</div>
 			</div>
 		</section>

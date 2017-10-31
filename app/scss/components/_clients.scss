@@ -37,6 +37,9 @@
 .clients__box {
     position: relative;
     z-index: 6;
+    @include mq-minmax(601px,1024px) {
+        margin-top: -10rem;
+    }
 }
 
 .clients__item {
@@ -90,6 +93,9 @@
 .clients__client-name {
     font-size: 2rem;
     font-weight: bold;
+    @include mq-max(600px) {
+        font-size: 1.6rem;
+    }
 }
 
 .clients__thumbnails {

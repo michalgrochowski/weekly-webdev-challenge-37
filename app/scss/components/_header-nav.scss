@@ -33,7 +33,7 @@
 .nav__logo {
     font-size: 4rem;
     text-decoration: none;
-    margin: 0 2rem;
+    margin: 0 3rem;
     color: #ffffff;
     font-weight: bold;
     transition: 0.3s all;
@@ -45,6 +45,10 @@
         @include mq-max(600px) {
             font-size: 2rem;
         }
+    }
+    &:hover, &:active {
+        color: #ebebeb;
+        text-decoration: none;
     }
 }
 
@@ -75,6 +79,8 @@
     font-size: 1.8rem;
     padding: 1rem;
     display: block;
+    color: #ffffff;
+    @include flex-center-row;
     @include mq-max(850px) {
         text-align: center;
         width: 100%;
@@ -97,6 +103,17 @@
     &:hover {
         color: #eaeaea;
         text-decoration: underline;
+    }
+}
+
+.nav__icon {
+    color: #ffffff;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    @include mq-max(600px) {
+        font-size: 2.5rem;
     }
 }
 

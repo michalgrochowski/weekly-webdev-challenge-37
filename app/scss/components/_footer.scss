@@ -33,7 +33,8 @@
         flex-direction: column;
     }
     @include mq-minmax(601px,1024px) {
-        
+        margin-top: 6rem;
+        margin-bottom: 3rem;
     }
     @include mq-min(1025px) {
         margin-top: 4rem;
@@ -49,6 +50,12 @@
         align-items: center;
         margin: 1rem 10%;
         width: 80%;
+    }
+    @include mq-minmax(601px,1024px) {
+        margin: 0 5rem;
+    }
+    @include mq-minmax(1025px,1350px) {
+        margin: 0 10rem;
     }
 }
 
@@ -114,6 +121,9 @@
         font-size: 1.4rem;
         padding: 0.5rem 1rem;
         text-align: center;
+    }
+    @include mq-minmax(601px,1024px) {
+        margin-top: 2rem;
     }
     @include mq-min(1025px) {
         margin-top: 3rem;

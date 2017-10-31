@@ -14,11 +14,12 @@
     position: absolute;
     top: 45%;
     transform: translateY(-55%);
-    left: 20%;
-    font-size: 10rem;
-    width: 30vw;
+    left: 10%;
+    font-size: 12rem;
+    width: 50vw;
     color: #ffffff;
     opacity: 0.3;
+    line-height: 0.85;
     filter: grayscale(100%);
     font-family: 'LemonMilkBold';
     @include mq-max(600px) {
@@ -30,6 +31,20 @@
         font-size: 6rem;
         left: 0;
         width: 100%;
+    }
+}
+
+.hero__big-title {
+    font-size: 14rem;
+    @include mq-max(600px) {
+        font-size: 6rem;
+    }
+}
+
+.hero__big-small {
+    font-size: 8rem;
+    @include mq-max(600px) {
+        font-size: 4rem;
     }
 }
 

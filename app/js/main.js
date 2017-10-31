@@ -10,6 +10,10 @@ $('.team__carousel').owlCarousel({
             items:1,
             margin:0
         },
+        600:{
+            items:2,
+            margin:-15
+        },
         1024:{
             items:3,
             margin:-30
@@ -103,7 +107,7 @@ $(document).on('click', '.nav__link--mobile', function(e) {
     $(".nav__list--mobile").hide();
 });
 
-$(document).on('click', '.nav__link', function(e) {
+$(document).on('click', '.nav__link, .nav__logo', function(e) {
     var id = $(this).attr('href');
     var $id = $(id);
     if ($id.length === 0) {
