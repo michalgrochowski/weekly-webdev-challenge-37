@@ -26,13 +26,18 @@
         left: 0;
         width: 100%;
     }
+    @include mq-minmax(601px,1024px) {
+        font-size: 6rem;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .hero__model {
     position: absolute;
     top: 15%;
     right: 0;
-    @include mq-max(600px) {
+    @include mq-max(1024px) {
         display: none;
     }
 }

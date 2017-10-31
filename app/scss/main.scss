@@ -79,6 +79,7 @@ body {
         font-size: 3rem;
         width: 100%;
         text-align: center;
+        margin-top: 2rem;
     }
     @include mq-minmax(600px,1024px) {
         font-size: 3rem;

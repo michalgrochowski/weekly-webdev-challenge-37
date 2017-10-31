@@ -17,6 +17,18 @@ $('.team__carousel').owlCarousel({
     }
 })
 
+$('.clients__box').owlCarousel({
+    loop: false,
+    lazyLoad: true,
+    nav: false,
+    responsive:{
+        0:{
+            items:1,
+            margin:0
+        },
+    }
+})
+
 $(window).on("scroll touchmove", function () {
     $('.nav').toggleClass("nav--small nav--scrolled", $(document).scrollTop() > 110);
     $('.nav__logo').toggleClass("nav__logo--small", $(document).scrollTop() > 110);
@@ -51,10 +63,11 @@ $(".nav__link--start").on("click", function(){
     }
 });
 
-$(".owl-carousel").on("translated.owl.carousel", function(e) {
+$(".team__carousel").on("translated.owl.carousel", function(e) {
     $(".owl-carousel .owl-item .team__position-box").removeClass("team__position-box--active");
     $(".owl-carousel .owl-item.center .team__position-box").addClass("team__position-box--active");
 });
+
 
 $('.team__next').click(function() {
     $('.team__carousel').trigger('next.owl.carousel', [300]);
@@ -63,6 +76,18 @@ $('.team__next').click(function() {
 $('.team__prev').click(function() {
     $('.team__carousel').trigger('prev.owl.carousel', [300]);
 });
+
+$(".clients__thumbnail-img--first").click(function(e){
+    $('.clients__box').trigger("to.owl.carousel", [0, 300, true]);
+})
+
+$(".clients__thumbnail-img--second").click(function(e){
+    $('.clients__box').trigger("to.owl.carousel", [1, 300, true]);
+})
+
+$(".clients__thumbnail-img--third").click(function(e){
+    $('.clients__box').trigger("to.owl.carousel", [2, 300, true]);
+})
 
 $(document).on('click', '.nav__link--mobile', function(e) {
     var id = $(this).attr('href');

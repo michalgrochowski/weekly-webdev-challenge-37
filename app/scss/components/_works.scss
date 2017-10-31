@@ -14,7 +14,7 @@
         left: -150px;
         top: 80%;
         z-index: 5;
-        @include mq-max(600px) {
+        @include mq-max(1024px) {
             display: none;
         }
     }
@@ -29,7 +29,7 @@
         right: -200px;
         top: 50%;
         z-index: 6;
-        @include mq-max(600px) {
+        @include mq-max(1024px) {
             display: none;
         }
     }

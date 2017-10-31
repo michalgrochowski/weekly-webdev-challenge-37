@@ -1,5 +1,5 @@
 .clients {
-    min-height: 750px;
+    min-height: 800px;
     position: relative;
     z-index: 4;
     &::before {
@@ -13,7 +13,7 @@
         left: -750px;
         top: 40%;
         z-index: 4;
-        @include mq-max(600px) {
+        @include mq-max(1024px) {
             display: none;
         }
     }
@@ -28,31 +28,36 @@
         right: -300px;
         top: -400px;
         z-index: 1;
-        @include mq-max(600px) {
+        @include mq-max(1024px) {
             display: none;
         }
     }
 }
 
 .clients__box {
-    @include flex-center-row;
     position: relative;
     z-index: 6;
-    margin-top: -10rem;
+}
+
+.clients__item {
+    @include flex-center-row;
+    width: 80vw;
+    margin: 0 10%;
     @include mq-max(600px) {
         flex-direction: column;
-        margin-top: 0;
     }
 }
 
-.clients__client-face {
+.clients__box.owl-carousel .owl-item .clients__item .clients__client-face {
+    width: 50%;
+    height: auto;
     @include mq-max(600px) {
-        width: 80%;
+        width: 100%;
     }
 }
 
 .clients__opinion {
-    width: 40%;
+    width: 80%;
     margin-left: 10rem;
     position: relative;
     @include mq-max(600px) {
@@ -61,9 +66,11 @@
     }
 }
 
-.clients__quote {
+.clients__box.owl-carousel .owl-item .clients__item .clients__opinion .clients__quote {
     position: absolute;
     top: 0;
+    height: 4rem;
+    width: auto;
     left: -10rem;
     @include mq-max(600px) {
         left: -7rem;
@@ -85,8 +92,21 @@
     font-weight: bold;
 }
 
-.clients__thumbnail {
-    @include flex-row;
+.clients__thumbnails {
+    width: 15rem;
+    height: 8rem;
+    @include flex-center-row;
+    position: absolute;
+    bottom: 10rem;
+    left: 45%;
+    z-index: 6;
+    cursor: pointer;
+    @include mq-max(600px) {
+        left: 50%;
+        width: 70%;
+        transform: translateX(-50%);
+        bottom: 1rem;
+    }
 }
 
 .clients__thumbnail-img {

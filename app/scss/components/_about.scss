@@ -14,7 +14,7 @@
         background-color: rgb(23,23,23);
         transform: rotate(45deg);
         z-index: -1;
-        @include mq-max(600px) {
+        @include mq-max(1024px) {
             display: none;
         }
     }
